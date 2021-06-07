@@ -1,2 +1,10 @@
 Openshift --
-oc new-app --docker-image=quay.io/tsrana/spring-boot-hello-world:quay --name=hello -e run-env=OpenShift --as-deployment-config
+oc apply -f hello-deployment.yaml
+oc apply -f hello-service.yaml
+oc apply -f hello-route.yaml
+oc rollout restart deployment/hello
+
+
+Kubernetes --
+oc apply -f hello-deployment.yaml
+oc apply -f hello-service.yaml
