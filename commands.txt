@@ -6,5 +6,8 @@ oc rollout restart deployment/hello
 
 
 Kubernetes --
-oc apply -f hello-deployment.yaml
-oc apply -f hello-service.yaml
+kubectl apply -f hello-deployment.yaml
+kubectl apply -f hello-service.yaml
+kubectl rollout restart deployment/hello
+
+kubectl create secret docker-registry mydocker --docker-server=docker.io --docker-username={docker-d} --docker-password={password} --docker-email=xxx@xxx.xx
