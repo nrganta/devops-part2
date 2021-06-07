@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello
+  labels:
+    app: hello
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+    spec:
+      containers:
+      - name: hello
+        imagePullPolicy: Always
+        image: quay.io/tsrana/spring-boot-hello-world:quay
+        env:
+        - name: RUN_ENV
+          value: "OpenShift"
+        ports:
+        - containerPort: 8080

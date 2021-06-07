@@ -1,0 +1,2 @@
+Openshift --
+oc new-app --docker-image=quay.io/tsrana/spring-boot-hello-world:quay --name=hello -e run-env=OpenShift --as-deployment-config
