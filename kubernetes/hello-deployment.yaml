@@ -19,7 +19,7 @@ spec:
       containers:
       - name: hello
         imagePullPolicy: Always
-        image: quay.io/tsrana/spring-boot-hello-world:quay
+        image: tsrana1/spring-boot-hello-world:quay
         env:
         - name: RUN_ENV
           value: "Kubernetes"
